@@ -15,30 +15,32 @@ if(!empty($_session)){
 $router = new \Bramus\Router\Router();
 
 $router->setBasePath("/php_avance/mvc");
-$router->get("/", function() { $controller = new \App\Controllers\HomeController(); $controller->index(); });
+$router->setNamespace('\App\Controllers');
 
-$router->get("/home", function() { $controller = new \App\Controllers\HomeController(); $controller->index(); });
+$router->get("/", "HomeController@index");
 
-$router->get("/products", function() { $controller = new \App\Controllers\ProductController(); $controller->index(); });
-$router->get("/product/{productId}", function($productId) { $controller = new \App\Controllers\ProductController(); $controller->show($productId); });
-$router->post("/product/{productId}", function($productId) { $controller = new \App\Controllers\ProductController(); $controller->show($productId); });
+$router->get("/home", "HomeController@index");
 
-$router->get("/contact", function() { $controller = new \App\Controllers\ContactController(); $controller->index(); });
-$router->post("/contact", function() { $controller = new \App\Controllers\ContactController(); $controller->index(); });
+$router->get("/products", "ProductController@index");
+$router->get("/product/([0-9]+)", "ProductController@show");
+$router->post("/product/([0-9]+)", "ProductController@show");
 
-$router->get("/basket", function() { $controller = new \App\Controllers\BasketController(); $controller->index(); });
-$router->post("/basket", function() { $controller = new \App\Controllers\BasketController(); $controller->index(); });
+$router->get("/contact", "ContactController@index");
+$router->post("/contact", "ContactController@index");
 
-$router->get("/login", function() { $controller = new \App\Controllers\AuthController(); $controller->login(); });
-$router->post("/login", function() { $controller = new \App\Controllers\AuthController(); $controller->login(); });
+$router->get("/basket", "BasketController@index");
+$router->post("/basket", "BasketController@index");
 
-$router->get("/register", function() {  $controller = new \App\Controllers\AuthController(); $controller->register(); });
+$router->get("/login", "AuthController@login");
+$router->post("/login", "AuthController@login");
 
-$router->get("/logout", function() {  $controller = new \App\Controllers\AuthController(); $controller->logout(); });
+$router->get("/register", "AuthController@register");
 
-$router->get("/settings", function() { $controller = new \App\Controllers\UserController(); $controller->settings(); });
+$router->get("/logout", "AuthController@logout");
 
-$router->get("/purchases", function() { $controller = new \App\Controllers\UserController(); $controller->purchases(); });
+$router->get("/settings", "UserController@settings");
 
-$router->set404(function() { $controller = new \App\Controllers\HomeController(); $controller->error404();});
+$router->get("/purchases", "UserController@purchases");
+
+$router->set404("HomeController@error404");
 $router->run();
