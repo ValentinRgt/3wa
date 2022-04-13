@@ -2,7 +2,7 @@ Cliquer sur les images ci-dessous pour vous rendre une branche annexe <br />
 [![Branche Principale](https://img.shields.io/badge/Branche%20Principale-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ValentinRgt/3wa)
 [![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://github.com/ValentinRgt/3wa/tree/php)
 
-3W Academy
+3W Academy - JAVASCRIPT
 =======
 Exposition de mes réalisations, réalisées pendant ma formation à la 3W Academy
 
