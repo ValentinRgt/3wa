@@ -1,5 +1,6 @@
-Voir la branche [![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://github.com/ValentinRgt/3wa/tree/javascript)<br />
-Voir la branche [![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://github.com/ValentinRgt/3wa/tree/php)
+Cliquer sur les images ci-dessous pour vous rendre une branche annexe <br />
+[![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://github.com/ValentinRgt/3wa/tree/javascript)
+[![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://github.com/ValentinRgt/3wa/tree/php)
 
 3W Academy
 =======
